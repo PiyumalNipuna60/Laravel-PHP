@@ -31,3 +31,9 @@ Route::get('/customer',function(){
     Route::get('/item',function(){
         return view('item-Page');
         });
+
+        // Route::get('/home', 'PagesControllers@indexHome');
+
+        // Route::get('/customer', 'PagesControllers@indexCustomer');
+        
+        // Route::get('/item', 'PagesControllers@indexItem');

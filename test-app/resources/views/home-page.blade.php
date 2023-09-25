@@ -6,6 +6,6 @@
     <title>HotCat</title>
 </head>
 <body>
-    <h1>Home Page Content</h1>
+<h1>Home Page Content</h1>
 </body>
 </html>
