@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PagesControllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +21,22 @@ Route::get('/', function () {
 
 
 Route::get('/home',function(){
-return view('home');
+return view('home-page');
 });
 
 
-Route::get('/customer',function(){
-    return view('customer-Page');
-    });
+// Route::get('/customer',function(){
+//     return view('customer-Page');
+//     });
 
 
     Route::get('/item',function(){
         return view('item-Page');
         });
 
-        // Route::get('/home', 'PagesControllers@indexHome');
+      //   Route::get('/home', 'CustomerController@indexHome');
 
-        // Route::get('/customer', 'PagesControllers@indexCustomer');
+         Route::get('/customer', [PagesControllers::class,'indexCustomer'])->name('indexCustomer');
+        // Route::get('/customer', [PagesControllers::class,'indexCustomer'])->name('indexCustomer');
         
         // Route::get('/item', 'PagesControllers@indexItem');
